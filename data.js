@@ -75,3 +75,18 @@ function calcolaTotale(oggetto){
 }
 
 console.log(calcolaTotale(store))
+
+
+function cercaProdotto(nome){
+
+  for (i=0; i<store.prodotti.length;i++){
+    if (nome === store.prodotti[i].nome){
+      return store.prodotti[i];
+    }else{
+      console.log('prodotto non esistente')
+    }
+  }
+}
+
+console.log(cercaProdotto('OP09'))
+
