@@ -27,7 +27,7 @@ let store = {
 
     {
       nome: 'OP09',
-      quantity: 15,
+      quantity: 15  ,
       price: 1049
     },
 
@@ -40,3 +40,38 @@ let store = {
 
   ]
 }
+
+
+function aggiungiProdotti(oggetto){
+
+  for (i=0; i<store.prodotti.length;i++){
+
+    if(store.prodotti[i].nome === oggetto.nome){
+      console.log('Prodotto già esistente')
+      return;
+    }else{
+      store.prodotti.push(oggetto)
+      return;
+    }
+  }
+}
+
+aggiungiProdotti( {
+      nome: 'JJJ',
+      quantity: 10,
+      price: 1049
+    });
+
+console.log(store)
+
+function calcolaTotale(oggetto){
+
+  let somma = 0
+  for (i=0; i<store.prodotti.length;i++){
+    somma = somma + store.prodotti[i].price
+  }
+
+  return Math.round(somma);
+}
+
+console.log(calcolaTotale(store))
