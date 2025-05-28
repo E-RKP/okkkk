@@ -128,7 +128,7 @@ let registro = {
       titolo: 'nuoto',
       categoria: 'fisica',
       durataMinuti: 30,
-      completata: false
+      completata: true
     },
 
      {
@@ -149,7 +149,45 @@ let registro = {
       titolo: 'lettura',
       categoria: 'sedentaria',
       durataMinuti: 60,
-      completata: false
+      completata: true
     },
   ]
 }
+
+function aggiungiAttivita(attivita){
+
+  for (i=0; i<registro.attivitàLuca.length;i++){
+    if (attivita.titolo != registro.attivitàLuca[i].titolo){
+      registro.attivitàLuca.push(attivita),
+      registro.attivitàPaolo.push(attivita)
+      return;
+    }
+  }
+}
+
+aggiungiAttivita({
+      titolo: 'dibattito',
+      categoria: 'sedentaria',
+      durataMinuti: 80,
+      completata: true
+    })
+console.log(registro)
+
+function attivitàCompletata(attivita){
+
+  for (i=0; i<registro.attivitàLuca.length;i++){
+
+    if (attivita === registro.attivitàLuca[i].titolo){
+      registro.attivitàLuca[i].completata = true
+    }
+
+    for (j=0; j<registro.attivitàPaolo.length;j++){
+
+      if (attivita === registro.attivitàPaolo[i].titolo){
+        registro.attivitàPaolo[i].completata = true
+      }
+    }
+  }
+}
+
+attivitàCompletata('lettura')
