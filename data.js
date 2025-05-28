@@ -90,3 +90,66 @@ function cercaProdotto(nome){
 
 console.log(cercaProdotto('OP09'))
 
+let registro = {
+
+  attivitàLuca: [
+    {
+      titolo: 'nuoto',
+      categoria: 'fisica',
+      durataMinuti: 30,
+      completata: false
+    },
+
+     {
+      titolo: 'calcio',
+      categoria: 'fisica',
+      durataMinuti: 120,
+      completata: true
+    },
+
+     {
+      titolo: 'studio',
+      categoria: 'sedentaria',
+      durataMinuti: 180,
+      completata: true
+    },
+
+     {
+      titolo: 'lettura',
+      categoria: 'sedentaria',
+      durataMinuti: 60,
+      completata: false
+    },
+  ],
+
+  attivitàPaolo: [
+
+    {
+      titolo: 'nuoto',
+      categoria: 'fisica',
+      durataMinuti: 30,
+      completata: false
+    },
+
+     {
+      titolo: 'calcio',
+      categoria: 'fisica',
+      durataMinuti: 120,
+      completata: true
+    },
+
+     {
+      titolo: 'studio',
+      categoria: 'sedentaria',
+      durataMinuti: 180,
+      completata: true
+    },
+
+     {
+      titolo: 'lettura',
+      categoria: 'sedentaria',
+      durataMinuti: 60,
+      completata: false
+    },
+  ]
+}
